@@ -1,0 +1,532 @@
+
+@import 'mixinVariables';
+
+.parent { 
+    overflow:hidden;
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    &::after {
+        @include pseudoPosition;
+        background-image: url("https://www.dropbox.com/s/0z4yej0toyidsg6/StarrySky.jpg?raw=1");    
+        background-size: cover;    
+        background-repeat:no-repeat;    
+        z-index:-3;
+        line-height:100%; 
+    }
+
+    &::before {
+        @include pseudoPosition;       
+        z-index:1;        
+    }
+    .container {
+        display:flex;
+        align-items:center;
+        width:80%;
+        height:60%;
+        text-align:center;        
+        font-size:3rem;
+        z-index: 2;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (min-width:550px) {
+    .parent{
+        .container {
+            flex-direction:row;
+            flex-wrap:nowrap;
+        }
+    }        
+}
+
+//all star
+.stars {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+
+    .sameStar {   
+        background-color: rgba(255, 255, 255, 0.6);
+        position: absolute;       
+        z-index:-1;  
+        clip-path: polygon(50% 0%,
+        61% 35%, 98% 35%, 68% 57%,
+        79% 91%, 50% 70%, 21% 91%,
+        32% 57%, 2% 35%, 39% 35%);        
+    }       
+
+    
+    @keyframes strarsOne {
+        from {
+            background-color: rgba(255,255,255,.6);
+        }
+        to {
+            @include starTo;
+        }
+    }
+    
+    //star one
+    .one {
+        @include smallArea;
+        top:50%;
+        left:5%;
+        animation: strarsOne 1s infinite;
+    }    
+    
+    //star two
+    .two {
+        @include smallArea;    
+        top:60%;
+        left:10%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);        
+        animation-delay:.2s;
+    }        
+ 
+    
+    //star three
+    .three {
+        @include mediumArea;
+        top:68%;
+        left:15%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.3s;
+    }   
+
+    .four {
+        @include smallArea;
+        top:75%;
+        left:20%;
+        animation: strarsOne 1s infinite;
+                
+        animation-delay:.4s;
+    }  
+
+    .five {
+        @include mediumArea;
+        top:70%;
+        left:25%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.5s;
+    }     
+     
+    //star six
+    .six {
+        @include smallArea;
+        top:65%;
+        left:30%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.6s;
+    }    
+    
+    
+    .seven {
+       @include largeArea;
+        top:70%;
+        left:50%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.7s;
+    }  
+
+    .eight {
+        @include smallArea;
+        top:65%;
+        left:60%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.8s;
+    }  
+
+    //star nine
+    .nine {
+        @include largeArea;
+        top:53%;
+        left:60%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.9s;
+    }     
+
+    .ten {
+        @include smallArea;
+        top:40%;
+        left:50%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.1s;
+    }   
+    
+    //star eleven
+    .eleven {
+        @include mediumArea;
+        top:28%;
+        left:45%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.2s;
+    }   
+    
+    .twelve {
+        @include smallArea;
+        top:35%;
+        left:30%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.3s;
+    }   
+    
+    .thirteen {
+        @include mediumArea;
+        top:28%;
+        left:15%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.4s;
+    }   
+    
+    //star fourteen
+    .fourteen {
+        @include smallArea;
+        top:10%;
+        left:30%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.5s;
+    }   
+    
+    .fifteen {
+        @include mediumArea;
+        top:12%;
+        left:50%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.6s;
+    }   
+    
+    .sixteen {
+        @include smallArea;
+        top:10%;
+        left:65%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.7s;
+    }   
+    
+    //star seventeen
+    .seventeen {
+        @include smallArea;
+        top:7%;
+        left:75%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.8s;
+    }   
+    
+    .eighteen {
+        @include mediumArea;
+        top:15%;
+        left:65%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.9s;
+    }   
+    
+    .nineteen {
+        @include largeArea;
+        top:15%;
+        left:85%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.1s;
+    }   
+    
+    //star twenty
+    .twenty {
+        @include smallArea;
+        top:23%;
+        left:70%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.9s;
+    }   
+    
+    .twoOne {
+        @include largeArea;
+        top:22%;
+        left:65%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.8s;
+    }   
+    
+    .twoTwo {
+        @include smallArea;
+        top:25%;
+        left:60%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.7s;
+    }   
+    
+    .twoThree {
+        @include mediumArea;
+        top:30%;
+        left:70%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.6s;
+    }   
+    
+    .twoFour {
+        @include mediumArea;
+        top:33%;
+        left:50%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.5s;
+    }   
+    
+    //star twentyFive
+    .twoFive {
+        @include largeArea;
+        top:40%;
+        left:60%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.4s;
+    }   
+    
+    .twoSix {
+        @include smallArea;
+        top:40%;
+        left:85%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.3s;
+    }   
+    
+    .twoSeven {
+        @include largeArea;
+        top:42%;
+        left:65%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.2s;
+    }   
+    
+        .twoEight {
+        @include mediumArea;
+        top:50%;
+        left:85%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.1s;
+    }   
+    
+        .twoNine {
+        @include largeArea;
+        top:50%;
+        left:75%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.5s;
+    } 
+  
+    
+    .thirty {
+        @include largeArea;
+        top:40%;
+        left:25%;
+        animation: strarsOne 1s infinite;
+        background-color: rgba(255,255,255,.6);         
+        animation-delay:.1s;
+    }  
+    
+    .threeOne {
+        top:40%;
+        left:15%;
+        @include starsFalling;
+        animation: strarFalling 7s infinite;       
+    }
+
+    @keyframes strarFalling {
+        from {
+            top:50%; 
+            left:15%;           
+        }
+
+        to {
+            top:80%;
+            background-color:transparent;
+            left:15%; 
+        }
+    }
+
+    .threeTwo {
+        top:30%;
+        left:80%;
+        @include starsFalling;
+        animation: strarFalling 7s infinite;        
+    }
+
+    @keyframes strarFalling {
+        from {
+            top:30%; 
+            left:80%;           
+        }
+
+        to {
+            top:85%;
+            background-color:transparent;
+            left:80%; 
+        }
+    }
+        
+}
+
+@media screen and (min-width:800px) {
+    .one {
+        @include smallArea1;
+    }    
+    
+    //star two
+    .two {
+        @include smallArea1; 
+    } 
+    
+    //star three
+    .three {
+        @include mediumArea1;
+    }   
+
+    .four {
+        @include smallArea1;
+    }  
+
+    .five {
+        @include mediumArea1;
+    }     
+     
+    //star six
+    .six {
+        @include smallArea1;
+    } 
+    
+    .seven {
+       @include largeArea1;
+    }  
+
+    .eight {
+        @include smallArea1;
+    }  
+
+    //star nine
+    .nine {
+        @include largeArea1; 
+    }     
+
+    .ten {
+        @include smallArea1;
+    }   
+    
+    //star eleven
+    .eleven {
+        @include mediumArea1;
+    }   
+    
+    .twelve {
+        @include smallArea1;
+    }   
+    
+    .thirteen {
+        @include mediumArea1;
+    }   
+    
+    //star fourteen
+    .fourteen {
+        @include smallArea1;
+    }   
+    
+    .fifteen {
+        @include mediumArea1;      
+    }   
+    
+    .sixteen {
+        @include smallArea1;    
+    }   
+    
+    //star seventeen
+    .seventeen {
+        @include smallArea1;     
+    }   
+    
+    .eighteen {
+        @include mediumArea1;     
+    }   
+    
+    .nineteen {
+        @include largeArea1;        
+    }   
+    
+    //star twenty
+    .twenty {
+        @include smallArea1;      
+    }   
+    
+    .twoOne {
+        @include largeArea1;       
+    }   
+    
+    .twoTwo {
+        @include smallArea1;       
+    }   
+    
+    .twoThree {
+        @include mediumArea1;       
+    }   
+    
+    .twoFour {
+        @include mediumArea1;       
+    }   
+    
+    //star twentyFive
+    .twoFive {
+        @include largeArea1;       
+    }   
+    
+    .twoSix {
+        @include smallArea1;        
+    }   
+    
+    .twoSeven {
+        @include largeArea1;       
+    }   
+    
+        .twoEight {
+        @include mediumArea1;       
+    }   
+    
+        .twoNine {
+        @include largeArea1;        
+    } 
+  
+    
+    .thirty {
+        @include largeArea1;    
+    } 
+
+}
+
+
+

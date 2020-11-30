@@ -1,0 +1,24 @@
+html, body {
+    width:100%;
+    height:100%;
+    background:linear-gradient(#fc00ff, #00dbde);
+}
+.ballFalling {
+    padding:2vh;
+}
+.Falling .ballRol {
+    position:relative;
+    top:0;
+    left:40%;
+    animation: balFall 4s infinite;
+}
+@keyframes balFall {
+    20% {
+        top:200px;
+    }
+    100% {
+        transform:rotate(720deg);
+        left:calc(40% + 250px);
+        top:200px;
+    }
+}

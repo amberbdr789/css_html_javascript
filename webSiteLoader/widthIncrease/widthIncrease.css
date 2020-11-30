@@ -1,0 +1,31 @@
+html, body {
+    width:100%;
+    height:100%;
+    background:linear-gradient(#f1f2b5, #135058);
+}
+
+.widthLength {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding:1rem;
+}
+
+.lengthIncrease {
+    border-radius:3rem;
+    height:15px;
+    width:0;
+    background:rgb(231,111,81);
+    /*e9c46a, f4a261, e76f51 */
+    animation:increaseLength 12s infinite;
+    border:2px solid #2a9d8f;
+}
+
+@keyframes increaseLength {
+    from {      
+        width:0;      
+    }
+    to {
+    width:90vw;   
+    }
+}

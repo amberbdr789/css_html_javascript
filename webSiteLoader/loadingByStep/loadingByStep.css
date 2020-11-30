@@ -1,0 +1,74 @@
+html, body {
+    height:100%;
+    width:100%;
+    background:linear-gradient(#feac5e,#c779d0, #4bc0c8);
+}
+
+.LoadingStep {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Loading {
+    background:linear-gradient(#360033, #0b8793);
+    height:5vh;
+    animation:loadingS 10s infinite;
+    border-radius:50px;
+    animation-timing-function: linear;
+}
+
+@keyframes loadingS {
+    0% {
+        width:0vw;
+    }
+    5% {
+        width:7vw;
+    }
+    10% {
+        width:7vw;
+    }
+    15% {
+        width:14vw;
+    }
+    20% {
+        width:14vw;
+    }
+    25% {
+        width:21vw;
+    }
+    30% {
+        width:21vw;
+    }
+    35% {
+        width:28vw;
+    }
+    40% {
+        width:28vw;
+    }
+    45% {
+        width:35vw;
+    }
+    50% {
+        width:35vw;
+    } 
+    55% {
+        width:42vw;
+    } 
+    60% {
+        width:42vw;
+    } 
+    65% {
+        width:49vw;
+    } 
+    70% {
+        width:49vw;
+    }
+    
+    90% {
+        width:90vw;
+    }   
+    
+}
